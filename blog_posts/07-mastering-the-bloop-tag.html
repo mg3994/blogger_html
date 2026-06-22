@@ -1,34 +1,18 @@
 <h1>Mastering the b:loop Tag</h1>
 
-<p>The <code>&lt;b:loop&gt;</code> tag is used to iterate through a collection of data, such as a list of blog posts, labels, or comments. It is the workhorse of dynamic content display in Blogger.</p>
+<p>The <code>&lt;b:loop&gt;</code> tag is used to iterate through a collection of <a href="#link-to-post-01">Array data</a>. It's the primary way Blogger displays your post list. See <a href="https://bloggerbasics101.blogspot.com/2018/11/blogger-bloop-tag.html" target="_blank">the full b:loop documentation</a> for more.</p>
 
 <h2>Basic Syntax</h2>
 <pre><code>&lt;b:loop values='DATA_COLLECTION' var='VARIABLE_NAME'&gt;
-  &lt;!-- Content to repeat for each item --&gt;
+  &lt;!-- Content to repeat --&gt;
 &lt;/b:loop&gt;</code></pre>
 
-<h2>Example: Listing Labels</h2>
-<pre><code>&lt;ul&gt;
-  &lt;b:loop values='data:posts.first.labels' var='label'&gt;
-    &lt;li&gt;&lt;a expr:href='data:label.url'&gt;&lt;data:label.name/&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;/b:loop&gt;
-&lt;/ul&gt;</code></pre>
-
-<h2>Advanced Attributes</h2>
-<ul>
-    <li><code>index</code>: A variable name to track the current position in the loop (starting at 0).</li>
-    <li><code>reverse</code>: If set to "true", the loop iterates in reverse order.</li>
-</ul>
-
-<pre><code>&lt;b:loop values='data:posts' var='post' index='i'&gt;
-  &lt;p&gt;Post Number &lt;data:i/&gt;: &lt;data:post.title/&gt;&lt;/p&gt;
-&lt;/b:loop&gt;</code></pre>
-
-<h2>Filtering Loops</h2>
-<p>You can combine loops with lambda operators for powerful results:</p>
+<h2>Filtering Loops with Lambda</h2>
+<p>You can combine loops with <a href="#link-to-post-08">Lambda Operators</a> for powerful filtering:</p>
 <pre><code>&lt;!-- Only show the first 3 posts --&gt;
 &lt;b:loop values='data:posts limit 3' var='post'&gt;
   &lt;h2&gt;&lt;data:post.title/&gt;&lt;/h2&gt;
 &lt;/b:loop&gt;</code></pre>
+<p>This is a great technique for <a href="#link-to-post-25">optimizing mobile views</a>.</p>
 
-<p>Loops allow you to create beautiful, data-driven grids and lists that update automatically as you publish new content.</p>
+<p>Loops are also critical for generating <a href="#link-to-post-21">Post Label Summaries</a>. Understanding how to manage your <code>var</code> and <code>values</code> <a href="#link-to-post-02">Attributes</a> is the key to success.</p>

@@ -1,19 +1,10 @@
 <h1>Blogger Conditional Tags: b:if, b:else, and b:elseif</h1>
 
-<p>Conditional tags allow you to show or hide content based on specific conditions, such as which page the visitor is currently viewing.</p>
+<p>Conditional tags allow you to show or hide content based on specific conditions. This is the secret to creating <a href="#link-to-post-20">custom homepages and hiding sidebars</a>. For more examples, see <a href="https://bloggerbasics101.blogspot.com/2018/11/blogger-bif-belse-and-belseif-tag.html" target="_blank">BloggerBasics101's Conditional Guide</a>.</p>
 
 <h2>Basic Syntax</h2>
 <pre><code>&lt;b:if cond='CONDITION'&gt;
   &lt;!-- Content to show if condition is true --&gt;
-&lt;/b:if&gt;</code></pre>
-
-<h2>Using b:else and b:elseif</h2>
-<pre><code>&lt;b:if cond='data:view.isPost'&gt;
-  &lt;p&gt;This is a post page.&lt;/p&gt;
-&lt;b:elseif cond='data:view.isPage'/&gt;
-  &lt;p&gt;This is a static page.&lt;/p&gt;
-&lt;b:else/&gt;
-  &lt;p&gt;This is something else (Home, Label, or Archive).&lt;/p&gt;
 &lt;/b:if&gt;</code></pre>
 
 <h2>Commonly Used Conditions</h2>
@@ -27,29 +18,17 @@
     <tbody>
         <tr>
             <td><code>data:view.isHomepage</code></td>
-            <td>True if the visitor is on the main homepage.</td>
+            <td>True if on the main homepage. Used for <a href="#link-to-post-20">Real Homepages</a>.</td>
         </tr>
         <tr>
             <td><code>data:view.isPost</code></td>
-            <td>True if the visitor is viewing a specific blog post.</td>
-        </tr>
-        <tr>
-            <td><code>data:view.isPage</code></td>
-            <td>True if the visitor is viewing a static page.</td>
-        </tr>
-        <tr>
-            <td><code>data:view.isLabelSearch</code></td>
-            <td>True if the visitor is viewing a label result page.</td>
+            <td>True if viewing a specific blog post. Essential for <a href="#link-to-post-11">Breadcrumbs</a>.</td>
         </tr>
         <tr>
             <td><code>data:view.isMobile</code></td>
-            <td>True if the visitor is using a mobile device.</td>
-        </tr>
-        <tr>
-            <td><code>data:blog.url == data:blog.homepageUrl</code></td>
-            <td>Another way to check for the homepage.</td>
+            <td>True if using a mobile device. Useful for <a href="#link-to-post-25">Limiting Posts on Mobile</a>.</td>
         </tr>
     </tbody>
 </table>
 
-<p>These tags are essential for customizing layouts, such as hiding sidebars on post pages or showing unique banners on the homepage.</p>
+<p>Conditions work by evaluating <a href="#link-to-post-01">Blogger Data</a> using <a href="#link-to-post-03">Comparison Operators</a>. For handling many conditions at once, check out the <a href="#link-to-post-28">b:switch tag</a>.</p>

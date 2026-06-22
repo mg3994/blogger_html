@@ -1,0 +1,19 @@
+<h1>Deep Dive: b:message and b:param (Localization)</h1>
+
+<p>If you want to build themes that support multiple languages, you need to understand <code>&lt;b:message&gt;</code> and <code>&lt;b:param&gt;</code>. These tags allow you to pull translated strings directly from Blogger's servers. Learn more at <a href="https://bloggerbasics101.blogspot.com/2018/11/blogger-bmessage-and-bparam-tag.html" target="_blank">BloggerBasics101</a>.</p>
+
+<h2>1. The b:message Tag</h2>
+<p>Fetches a predefined message based on the blog's language setting. For example, the "Read More" text.</p>
+<pre><code>&lt;b:message name='messages.readMore'/&gt;</code></pre>
+
+<h2>2. The b:param Tag</h2>
+<p>Some messages require parameters (like "Showing 5 of 10 posts"). You use <code>b:param</code> to fill in those blanks.</p>
+
+<h2>3. Why use them?</h2>
+<ul>
+    <li><strong>Accessibility:</strong> Your blog automatically speaks the user's language.</li>
+    <li><strong>Consistency:</strong> Uses the same terminology as the Blogger dashboard.</li>
+    <li><strong>Professionalism:</strong> Essential for themes designed for global distribution or <a href="#link-to-post-16">custom domain</a> use.</li>
+</ul>
+
+<p>Combined with <a href="#link-to-post-06">Conditional Tags</a>, you can create a truly localized <a href="#link-to-post-15">User Experience</a> for readers all over the world.</p>

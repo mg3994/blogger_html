@@ -1,0 +1,18 @@
+<h1>Deep Dive: CDATA and Comment tags</h1>
+
+<p>The <code>CDATA</code> block and <code>&lt;b:comment&gt;</code> tag are essential for managing how your code is processed by the Blogger engine and viewed by search bots. See <a href="https://bloggerbasics101.blogspot.com/2018/11/blogger-cdata.html" target="_blank">CDATA</a> and <a href="https://bloggerbasics101.blogspot.com/2018/11/blogger-bcomment-tag.html" target="_blank">b:comment</a> for more.</p>
+
+<h2>1. The CDATA Block</h2>
+<p>CDATA stands for "Character Data." It tells the XML compiler: "Do not process this section as XML; it's just raw text." This is critical for <a href="#link-to-post-22">CSS styling</a> and JavaScript.</p>
+<pre><code>&lt;style&gt;
+/*&lt;![CDATA[*/
+  body { background: url('...&amp;...'); }
+/*]]&gt;*/
+&lt;/style&gt;</code></pre>
+<p>Without CDATA, characters like <code>&amp;</code> or <code>&lt;</code> would cause template errors.</p>
+
+<h2>2. The b:comment Tag</h2>
+<p>While standard HTML comments (<code>&lt;!-- --&gt;</code>) are visible in the source code, <code>&lt;b:comment&gt;</code> is only visible in your template editor. It's perfect for <a href="#link-to-post-29">documenting your code</a> for other developers or for your future self.</p>
+
+<h2>3. Best Practices</h2>
+<p>Use <code>b:comment</code> to mark different <a href="#link-to-post-05">sections</a> of your theme. Use CDATA whenever you are adding custom <a href="#link-to-post-24">Widgets</a> that include complex scripts. Both help maintain <a href="#link-to-post-18">high performance</a> and clean code.</p>

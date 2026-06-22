@@ -1,29 +1,21 @@
 <h1>Introducing Modern Theme Design with blogger_theme</h1>
 
-<p>Writing raw Blogger XML can be tedious. Managing a 10,000-line XML file is difficult and error-prone. But what if you could design your theme using a modern programming language and split it into multiple files?</p>
+<p>Writing raw Blogger XML can be tedious. But what if you could design your theme using <a href="https://dart.dev/" target="_blank">Dart</a> and split it into multiple files? That's exactly what the <a href="https://pub.dev/packages/blogger_theme" target="_blank">blogger_theme package</a> allows you to do.</p>
 
 <h2>What is blogger_theme?</h2>
-<p><code>blogger_theme</code> is a lightweight Dart library that allows you to generate Blogger (Blogspot) theme XML using a clean, declarative API inspired by Jaspr and Flutter.</p>
+<p><code>blogger_theme</code> is a lightweight Dart library for generating Blogger (Blogspot) theme XML using a clean, declarative API inspired by <a href="https://jaspr.site/" target="_blank">Jaspr</a> and <a href="https://flutter.dev/" target="_blank">Flutter</a>.</p>
 
 <h2>Why use a Framework?</h2>
 <ul>
-    <li><strong>Modular Code:</strong> Split your theme into components (Header.dart, Sidebar.dart, PostLoop.dart) instead of one giant file.</li>
-    <li><strong>Type Safety:</strong> Dart helps you catch errors before you ever upload your template.</li>
-    <li><strong>Reusable Components:</strong> Create a widget once and reuse it across different themes.</li>
-    <li><strong>Modern Workflow:</strong> Use tools like VS Code and Git to manage your theme development.</li>
+    <li><strong>Modular Code:</strong> Split your theme into components. This is the core of <a href="#link-to-post-29">hassle-free development</a>.</li>
+    <li><strong>Type Safety:</strong> Catch errors before you ever upload.</li>
+    <li><strong>Modern Workflow:</strong> Use tools like VS Code and Git.</li>
 </ul>
 
 <h2>Basic Syntax Comparison</h2>
-
-<h3>Traditional XML:</h3>
-<pre><code>&lt;b:if cond='data:view.isPost'&gt;
-  &lt;div class='post-body'&gt;
-    &lt;data:post.body/&gt;
-  &lt;/div&gt;
-&lt;/b:if&gt;</code></pre>
-
-<h3>Using blogger_theme (Dart):</h3>
-<pre><code>BIf(
+<p>Instead of writing raw <a href="#link-to-post-04">Blogger Tags</a>, you use Dart classes:</p>
+<pre><code>// Dart code using blogger_theme
+BIf(
   cond: 'data:view.isPost',
   children: [
     Div(
@@ -33,9 +25,4 @@
   ],
 )</code></pre>
 
-<h2>How to Get Started</h2>
-<p>If you are already familiar with Dart or Flutter, you can simply add the package to your <code>pubspec.yaml</code>:</p>
-<pre><code>dependencies:
-  blogger_theme: ^3.0.0</code></pre>
-
-<p>The framework then generates the final XML file for you to paste into Blogger. It’s the future of professional Blogger theme development!</p>
+<p>Ready to level up? Check out the <a href="https://pub.dev/packages/blogger_theme/install" target="_blank">Installation Guide</a> and start building modern themes today!</p>

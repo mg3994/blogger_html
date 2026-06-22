@@ -1,28 +1,20 @@
 <h1>Meta Tags, OpenGraph, and Twitter Cards</h1>
 
-<p>Meta tags are snippets of text that describe a page's content. They don't appear on the page itself, but in the page's code. They are essential for SEO and for how your blog posts look when shared on social media.</p>
+<p>Meta tags are snippets of text that describe a page's content to search engines and social media. Mastering these is key to <a href="#link-to-post-14">Advanced SEO</a>. For a deep dive, see <a href="https://bloggerbasics101.blogspot.com/2018/10/what-is-meta-tags-and-what-is-opengraph.html" target="_blank">What is Meta Tags and Opengraph Tag?</a>.</p>
 
-<h2>1. Standard Meta Tags</h2>
-<p>These tell search engines about your blog. Most are handled automatically by Blogger, but you can customize them in <strong>Settings > Meta tags</strong>.</p>
+<h2>1. Social Sharing</h2>
 <ul>
-    <li><strong>Description:</strong> A summary of your post that appears in search results.</li>
-    <li><strong>Keywords:</strong> Less important today, but still used by some smaller search engines.</li>
+    <li><strong>OpenGraph (OG):</strong> Controls how links look on Facebook and LinkedIn.</li>
+    <li><strong>Twitter Cards:</strong> Enhances sharing on Twitter. Learn <a href="https://bloggerbasics101.blogspot.com/2018/10/what-is-twitter-card-meta-and-how-we.html" target="_blank">how to make a Twitter Card for Blogger</a>.</li>
 </ul>
 
-<h2>2. OpenGraph Tags (Facebook/LinkedIn)</h2>
-<p>OpenGraph (OG) tags control how your links look when shared on Facebook and LinkedIn. Without them, Facebook might pick a random image from your blog or no image at all.</p>
+<h2>2. Dynamic Implementation</h2>
+<p>In your theme's <code>&lt;head&gt;</code>, you can use <a href="#link-to-post-03">Blogger Operators</a> and <a href="#link-to-post-01">Data Tags</a> to automatically pull information for each post. See our guide on <a href="https://bloggerbasics101.blogspot.com/2018/10/dynamically-create-opengraph-twitter.html" target="_blank">Dynamically creating Meta Tags</a>.</p>
+
 <pre><code>&lt;meta property="og:title" expr:content='data:blog.pageName' /&gt;
-&lt;meta property="og:type" content="article" /&gt;
-&lt;meta property="og:url" expr:content='data:blog.url' /&gt;
 &lt;meta property="og:image" expr:content='data:post.featuredImage' /&gt;</code></pre>
 
-<h2>3. Twitter Cards</h2>
-<p>Similar to OpenGraph, Twitter Cards make your links look like rich media on Twitter, including a large image, title, and description.</p>
-<pre><code>&lt;meta name="twitter:card" content="summary_large_image" /&gt;
-&lt;meta name="twitter:title" expr:content='data:blog.pageName' /&gt;
-&lt;meta name="twitter:image" expr:content='data:post.featuredImage' /&gt;</code></pre>
-
-<h2>How to add them dynamically?</h2>
-<p>Blogger now includes many of these automatically if you use the <code>&lt;b:include data='blog' name='all-head-content'/&gt;</code> tag in your theme's head section. However, for full control, you can manually insert them using Blogger expressions to pull the post title and featured image dynamically.</p>
+<h2>3. Connection to Structured Data</h2>
+<p>While meta tags are for humans and social platforms, <a href="#link-to-post-17">Structured Data (JSON-LD)</a> is for search engines to create rich snippets. Both are essential for a professional blog.</p>
 
 <p>Proper meta tags ensure that your content looks professional everywhere it's shared, leading to more clicks and higher engagement.</p>

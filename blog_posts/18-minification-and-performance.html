@@ -1,25 +1,14 @@
 <h1>Performance: Minification and External Assets</h1>
 
-<p>A fast blog is a successful blog. Google uses page speed as a ranking factor, and users will leave if your site takes more than a few seconds to load.</p>
+<p>A fast blog is essential for <a href="#link-to-post-14">SEO</a> and User Experience. Learn the basics in <a href="https://bloggerbasics101.blogspot.com/2018/10/what-is-minified-js-css-used-for.html" target="_blank">What is Minified JS, CSS used for?</a>.</p>
 
-<h2>1. What is Minification?</h2>
-<p>Minification is the process of removing all unnecessary characters from source code without changing its functionality. This includes removing:</p>
-<ul>
-    <li>Whitespace (spaces, tabs, newlines).</li>
-    <li>Comments.</li>
-    <li>Shortening variable names.</li>
-</ul>
+<h2>1. Minification</h2>
+<p>Minifying your <a href="#link-to-post-22">CSS and JavaScript</a> reduces file size. For large themes, consider <a href="https://bloggerbasics101.blogspot.com/2018/11/store-bskin-style-sheet-in-external.html" target="_blank">Storing B:Skin Style Sheets in an External Source</a> for better caching.</p>
 
-<h2>2. Minifying CSS in Blogger</h2>
-<p>Blogger's <code>&lt;b:skin&gt;</code> tag is usually where your CSS lives. While you want it to be readable while you work, the final version should be as compact as possible. Many professional designers use external tools to "minify" their CSS before pasting it into the template.</p>
+<h2>2. Image Optimization</h2>
+<p>Always use the <a href="#link-to-post-08">resizeImage Operator</a> to serve images at the correct size. This is one of the biggest performance gains you can make on Blogger.</p>
 
-<h2>3. Using External Style Sheets</h2>
-<p>If your CSS is very large, you can host it as an external <code>.css</code> file (on a CDN or GitHub) and link to it in your head section:</p>
-<pre><code>&lt;link rel="stylesheet" href="https://yourdomain.com/style.min.css" /&gt;</code></pre>
-<p>This allows the browser to cache the file, making subsequent page loads much faster.</p>
+<h2>3. Efficient Code</h2>
+<p>Using <a href="#link-to-post-28">Advanced Theme Tags</a> like <code>b:defaultmarkups</code> and <code>b:switch</code> can also help keep your template clean and fast. If you are a developer, using a <a href="#link-to-post-29">modular framework like blogger_theme</a> is the best way to manage complex, performant code.</p>
 
-<h2>4. Deferring JavaScript</h2>
-<p>JavaScript can often block the page from rendering. To prevent this, use the <code>async</code> or <code>defer</code> attributes when including external scripts:</p>
-<pre><code>&lt;script src="myscript.js" defer="defer"&gt;&lt;/script&gt;</code></pre>
-
-<p>Optimization is an ongoing process. Regularly testing your blog with tools like <strong>Google PageSpeed Insights</strong> will help you identify areas for improvement.</p>
+<p>Regularly testing your blog with tools like <strong>Google PageSpeed Insights</strong> will help you identify areas for improvement.</p>

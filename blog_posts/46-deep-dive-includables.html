@@ -1,0 +1,22 @@
+<h1>Deep Dive: b:includable and b:include (Modular code)</h1>
+
+<p>The <code>&lt;b:includable&gt;</code> and <code>&lt;b:include&gt;</code> tags are the keys to writing modular and clean code in Blogger. They allow you to define a block of code once and "include" it wherever you need it. Learn more at <a href="https://bloggerbasics101.blogspot.com/2018/11/blogger-binclude-and-bincludable-tag.html" target="_blank">BloggerBasics101</a>.</p>
+
+<h2>1. The b:includable Tag</h2>
+<p>This is where you define your code block. It must have a unique <code>id</code>. Every <a href="#link-to-post-05">widget</a> must have an includable with <code>id='main'</code>.</p>
+<pre><code>&lt;b:includable id='postTitle' var='post'&gt;
+  &lt;h2&gt;&lt;data:post.title/&gt;&lt;/h2&gt;
+&lt;/b:includable&gt;</code></pre>
+
+<h2>2. The b:include Tag</h2>
+<p>This is how you call your defined block. You use the <code>name</code> attribute to match the <code>id</code> of the includable.</p>
+<pre><code>&lt;b:include name='postTitle' data='post'/&gt;</code></pre>
+
+<h2>3. Why use them?</h2>
+<ul>
+    <li><strong>Reusability:</strong> Use the same "Post Title" design on your homepage, search pages, and post pages.</li>
+    <li><strong>Readability:</strong> Keep your <a href="#link-to-post-05">Blog1 widget</a> from becoming a giant, confusing mess of code.</li>
+    <li><strong>Modular Design:</strong> This concept is the basis for <a href="#link-to-post-29">professional multi-file development</a>.</li>
+</ul>
+
+<p>Mastering inclusions is the first step in moving from simple template editing to building a <a href="#link-to-post-12">modern framework-based theme</a>.</p>

@@ -1,0 +1,24 @@
+<h1>Blogger Trick: Implementing a "Time to Read" Indicator</h1>
+
+<p>Letting your readers know how long a post will take to read can increase engagement and improve your <a href="#link-to-post-15">User Experience</a>. You can calculate this dynamically using JavaScript and <a href="#link-to-post-01">Blogger Data</a>.</p>
+
+<h2>1. The Concept</h2>
+<p>The average person reads about 200-250 words per minute. We'll take your post body, count the words, and display the result.</p>
+
+<h2>2. The Template Code</h2>
+<p>Place this inside your <a href="#link-to-post-05">Blog1 Widget</a>, near the post title or <a href="#link-to-post-11">Breadcrumbs</a>.</p>
+<pre><code>&lt;b:if cond='data:view.isPost'&gt;
+  &lt;span id='reading-time'&gt;&lt;/span&gt;
+&lt;/b:if&gt;</code></pre>
+
+<h2>3. The Script</h2>
+<pre><code>&lt;script&gt;
+  var text = document.querySelector('.post-body').innerText;
+  var wpm = 225;
+  var words = text.trim().split(/\s+/).length;
+  var time = Math.ceil(words / wpm);
+  document.getElementById('reading-time').innerText = time + ' min read';
+&lt;/script&gt;</code></pre>
+
+<h2>4. SEO and Performance</h2>
+<p>This small addition doesn't affect <a href="#link-to-post-18">Performance</a> much but makes your blog feel modern. Combine it with <a href="#link-to-post-17">Structured Data</a> to give both humans and bots a better understanding of your content.</p>

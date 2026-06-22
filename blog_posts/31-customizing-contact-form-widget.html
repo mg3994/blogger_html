@@ -1,0 +1,27 @@
+<h1>Using Blogger's 'Contact Form' Widget with Custom CSS</h1>
+
+<p>A contact form is essential for any professional blog. While Blogger provides a built-in 'Contact Form' gadget, it often doesn't match your theme's <a href="#link-to-post-22">CSS styling</a>. Let's fix that.</p>
+
+<h2>1. Adding the Widget</h2>
+<p>Go to <strong>Layout > Add a Gadget > Contact Form</strong>. By default, it will appear in your sidebar or footer. You can also hide it using <a href="#link-to-post-22">CSS (display:none)</a> and only show it on a dedicated 'Contact' page using <a href="#link-to-post-06">Conditional Tags</a>.</p>
+
+<h2>2. Customizing the Look</h2>
+<p>The contact form elements have specific IDs like <code>#ContactForm1_contact-form-name</code>. You can target these in your <code>&lt;b:skin&gt;</code> to change colors, fonts, and padding.</p>
+
+<pre><code>.contact-form-name, .contact-form-email, .contact-form-email-message {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contact-form-button-submit {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}</code></pre>
+
+<h2>3. Advanced: Moving the Form to a Page</h2>
+<p>Instead of the sidebar, you might want the form on its own page. You can <a href="#link-to-post-24">manually add the HTML gadget</a> to a static page and use the default Blogger CSS classes to ensure the backend functionality still works.</p>
+
+<p>A professional contact form builds trust with your audience and potential sponsors, helping you grow your blog into a business.</p>

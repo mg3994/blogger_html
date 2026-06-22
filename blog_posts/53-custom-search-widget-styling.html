@@ -1,0 +1,22 @@
+<h1>Blogger Trick: Customizing the 'Search' Widget with CSS</h1>
+
+<p>Blogger's default 'Search' gadget is functional but often doesn't fit a <a href="#link-to-post-22">custom theme design</a>. Let's style it to match your blog's aesthetic perfectly.</p>
+
+<h2>1. Identifying the Classes</h2>
+<p>Use the <a href="#link-to-post-22">Inspect Tool</a> on your search box. You'll see classes like <code>.gsc-input</code> (for the text box) and <code>.gsc-search-button</code> (for the button).</p>
+
+<h2>2. Custom CSS</h2>
+<p>Add this to your <a href="#link-to-post-36">b:skin</a> to create a modern, minimal search bar.</p>
+<pre><code>.gsc-control-cse { background-color: transparent !important; border: none !important; }
+.gsc-input { border-radius: 20px !important; padding: 10px !important; }
+.gsc-search-button { background-color: #007bff !important; color: #fff !important; border-radius: 20px !important; }</code></pre>
+
+<h2>3. Advanced: The b:tag approach</h2>
+<p>For even more control, you can build your own search form from scratch using <a href="#link-to-post-48">b:tag and b:attr</a>. This allows you to place the search box anywhere, like in your <a href="#link-to-post-11">Breadcrumb area</a> or your <a href="#link-to-post-20">Real Homepage</a>.</p>
+
+<pre><code>&lt;form action='/search' method='get'&gt;
+  &lt;input name='q' placeholder='Search this blog...' type='text'/&gt;
+  &lt;button type='submit'&gt;Search&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+<p>A clean search interface is key to a professional <a href="#link-to-post-15">User Experience</a> and helps your <a href="#link-to-post-21">Post Summaries</a> get more clicks.</p>

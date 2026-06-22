@@ -1,0 +1,21 @@
+<h1>Customizing the 'Popular Posts' Widget</h1>
+
+<p>The 'Popular Posts' widget is one of the most effective ways to keep visitors on your blog by showing them your most successful content. However, the default look can be a bit plain. Let's learn how to customize it.</p>
+
+<h2>1. The Basic Widget</h2>
+<p>You can add the widget via <strong>Layout > Add a Gadget > Popular Posts</strong>. It allows you to show snippets, thumbnails, and filter by time range (Last 30 days, All time, etc.).</p>
+
+<h2>2. Custom HTML Structure</h2>
+<p>To fully customize the look, you need to edit the <a href="#link-to-post-05">b:widget code</a>. You can use <a href="#link-to-post-08">resizeImage</a> to ensure thumbnails are uniform and <a href="#link-to-post-08">snippet</a> to control the text length.</p>
+
+<pre><code>&lt;b:loop values='data:posts' var='post'&gt;
+  &lt;div class='popular-item'&gt;
+    &lt;img expr:src='resizeImage(data:post.featuredImage, 100, "1:1")'/&gt;
+    &lt;a expr:href='data:post.url'&gt;&lt;data:post.title/&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/b:loop&gt;</code></pre>
+
+<h2>3. Styling with CSS</h2>
+<p>Use <a href="#link-to-post-22">CSS styling</a> to create a grid or a list with hover effects. For professional designs, many developers use the <a href="#link-to-post-29">blogger_theme framework</a> to manage complex widget layouts in separate files.</p>
+
+<p>A well-designed Popular Posts section can significantly reduce your bounce rate and improve your <a href="#link-to-post-14">SEO</a> by increasing internal linking.</p>

@@ -1,0 +1,18 @@
+<h1>Adding a 'Related Posts' section using Labels</h1>
+
+<p>A 'Related Posts' section at the end of every article encourages readers to stay on your blog. Since Blogger doesn't have this feature built-in, we use <a href="#link-to-post-01">Labels</a> and some JavaScript to create one.</p>
+
+<h2>1. The Logic</h2>
+<p>We use a script that looks at the <a href="#link-to-post-01">Array</a> of labels for the current post and then fetches other posts with the same labels using the <a href="https://developers.google.com/blogger/docs/2.0/developers_guide_protocol" target="_blank">Blogger Feed API</a>.</p>
+
+<h2>2. Template Integration</h2>
+<p>You need to place the script container inside your <a href="#link-to-post-05">Blog1 widget</a>, usually just after the post body.</p>
+<pre><code>&lt;b:if cond='data:view.isPost'&gt;
+  &lt;div id='related-posts'/&gt;
+  &lt;script src='/path/to/related-posts.js'/&gt;
+&lt;/b:if&gt;</code></pre>
+
+<h2>3. Styling</h2>
+<p>Use <a href="#link-to-post-22">CSS</a> to style the thumbnails and titles. Many designers use the <a href="#link-to-post-08">resizeImage operator</a> within their feed scripts to ensure the related post thumbnails load fast and look great.</p>
+
+<p>Related posts are a cornerstone of <a href="#link-to-post-14">Advanced SEO</a>, as they improve your site's internal link structure and session duration.</p>

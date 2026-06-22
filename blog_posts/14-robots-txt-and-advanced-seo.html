@@ -1,28 +1,14 @@
 <h1>Robots.txt and Advanced SEO for Blogger</h1>
 
-<p>To have full control over how search engines crawl your blog, you need to understand the <code>robots.txt</code> file and how to use robots meta tags.</p>
+<p>To have full control over how search engines crawl your blog, you need to understand the <code>robots.txt</code> file and robots meta tags. For more information, read <a href="https://bloggerbasics101.blogspot.com/2018/10/what-is-web-robot-and-robotstxt.html" target="_blank">What is Web Robot and Robots.txt?</a>.</p>
 
 <h2>1. What is Robots.txt?</h2>
-<p>The <code>robots.txt</code> file tells search engine crawlers which pages or files the crawler can or can't request from your site. This is used mainly to avoid overloading your site with requests.</p>
+<p>It's a file that tells <a href="https://bloggerbasics101.blogspot.com/2018/10/what-is-google-crawl-and-index.html" target="_blank">search engine crawlers</a> which parts of your blog to ignore. You can find your blog's version at <code>/robots.txt</code>.</p>
 
-<h3>Blogger's Default Robots.txt</h3>
-<p>By default, Blogger creates a perfect <code>robots.txt</code> for you. It allows crawling of posts and pages but blocks search result pages (to avoid duplicate content issues).</p>
+<h2>2. Custom Robots Header Tags</h2>
+<p>Blogger allows you to set custom header tags in <strong>Settings</strong>. This is a powerful way to tell robots not to index specific types of pages, like <a href="https://bloggerbasics101.blogspot.com/2018/11/tell-robots-not-indexing-blogger-archive.html" target="_blank">Archives</a>. This helps prevent "duplicate content" issues in the <a href="https://bloggerbasics101.blogspot.com/2018/10/what-is-serp-mean-explained.html" target="_blank">SERPs</a>.</p>
 
-<h2>2. Customizing Robots.txt</h2>
-<p>You can edit this in <strong>Settings > Crawlers and indexing > Custom robots.txt</strong>. <strong>Warning:</strong> Improper settings can hide your entire blog from Google!</p>
+<h2>3. SEO Connections</h2>
+<p>Advanced SEO involves combining these crawling rules with <a href="#link-to-post-09">Sitemaps</a>, <a href="#link-to-post-13">Meta Tags</a>, and <a href="#link-to-post-17">Structured Data</a>. Together, they make your blog highly visible to search engines like Google.</p>
 
-<h2>3. Custom Robots Header Tags</h2>
-<p>This is a safer and more precise way to control indexing. In <strong>Settings</strong>, you can set defaults for:</p>
-<ul>
-    <li><strong>Home page:</strong> Usually set to <code>all</code>.</li>
-    <li><strong>Archive and Search Pages:</strong> Usually set to <code>noindex</code> to avoid duplicate content.</li>
-    <li><strong>Posts and Pages:</strong> Set to <code>all</code>.</li>
-</ul>
-
-<h2>4. Blocking Specific Pages (noindex)</h2>
-<p>If you have a specific post you don't want to show in search results, you can add this inside your template within a conditional tag:</p>
-<pre><code>&lt;b:if cond='data:blog.url == "URL_OF_PAGE_TO_HIDE"'&gt;
-  &lt;meta name="robots" content="noindex" /&gt;
-&lt;/b:if&gt;</code></pre>
-
-<p>Advanced SEO is about making it as easy as possible for Google to find your high-quality content while hiding the technical or duplicate "noise" of your blog.</p>
+<p>Always remember to test your SEO changes using <a href="#link-to-post-09">Google Search Console</a> to ensure your blog is being crawled correctly.</p>

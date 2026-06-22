@@ -1,31 +1,20 @@
 <h1>Security First: HTTPS and Fixing Mixed Content</h1>
 
-<p>Security is no longer optional. Google prioritizes secure websites, and visitors feel safer browsing them. Blogger provides free SSL certificates for all blogs.</p>
+<p>Security is no longer optional. Google prioritizes secure websites, and visitors feel safer browsing them. For a deeper understanding of web security, see <a href="https://bloggerbasics101.blogspot.com/2018/10/what-is-secure-websites-and-ssltls.html" target="_blank">Secure Websites and SSL/TLS Certificates</a>.</p>
 
 <h2>1. Enabling HTTPS on Blogger</h2>
-<p>To turn on HTTPS for your blog:</p>
-<ol>
-    <li>Go to your Blogger dashboard.</li>
-    <li>Select <strong>Settings</strong>.</li>
-    <li>Scroll down to the <strong>HTTPS</strong> section.</li>
-    <li>Toggle <strong>HTTPS availability</strong> to "Yes".</li>
-    <li>Toggle <strong>HTTPS redirect</strong> to "Yes" (this ensures all <code>http://</code> traffic is moved to <code>https://</code>).</li>
-</ol>
+<p>Blogger provides free SSL for all blogs. You can activate it in <strong>Settings > HTTPS</strong>. Learn the <a href="https://bloggerbasics101.blogspot.com/2018/10/turn-on-https-on-our-blogspot-blog.html" target="_blank">full steps to turn on HTTPS here</a>.</p>
 
 <h2>2. What is Mixed Content?</h2>
-<p>Mixed content occurs when a secure (HTTPS) page includes resources (images, scripts, styles) that are being loaded via an insecure (HTTP) connection. This creates a security hole and often results in a "Not Secure" warning in the browser address bar.</p>
+<p>Mixed content occurs when a secure (HTTPS) page includes resources (images, scripts, styles) loaded via <code>http://</code>. This can break your <a href="#link-to-post-22">CSS styling</a> or show security warnings. Read more about <a href="https://bloggerbasics101.blogspot.com/2018/10/what-is-mixed-content.html" target="_blank">Mixed Content types</a>.</p>
 
 <h2>3. How to Fix Mixed Content</h2>
-<p>If you see a mixed content warning, you need to find the <code>http://</code> links in your template or posts and change them to <code>https://</code>.</p>
+<p>If you see a mixed content warning, you must update your links to <code>https://</code>. For blogs with hundreds of posts, you might need a <a href="https://bloggerbasics101.blogspot.com/2018/10/how-to-fix-mixed-content-in-hundred-post.html" target="_blank">search and replace tool</a>.</p>
 
 <h3>Common Culprits:</h3>
 <ul>
-    <li>Images hosted on external sites.</li>
-    <li>External scripts or CSS libraries.</li>
-    <li>iFrames (like old YouTube embed codes).</li>
+    <li>Images from external sites (host them on <a href="#link-to-post-23">Blogger/Google instead</a>).</li>
+    <li>External <a href="#link-to-post-18">Performance scripts</a>.</li>
 </ul>
 
-<h3>The Easy Fix:</h3>
-<p>In most cases, you can simply open your theme's HTML editor, press <strong>Ctrl+F</strong>, search for <code>http://</code>, and manually update the links to <code>https://</code>. If the external site supports HTTPS, the resource will load perfectly.</p>
-
-<p>Keeping your blog secure protects your visitors and improves your SEO standing.</p>
+<p>Keeping your blog secure protects your visitors and improves your SEO standing, especially when combined with <a href="#link-to-post-13">proper Meta Tags</a>.</p>

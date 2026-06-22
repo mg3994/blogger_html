@@ -1,28 +1,18 @@
 <h1>Adding Custom Widgets Manually</h1>
 
-<p>While Blogger provides many built-in gadgets (Labels, Archive, Profile), sometimes you need something unique—like a custom social media feed, a weather widget, or a specialized navigation menu.</p>
+<p>Extend Blogger's functionality by adding custom gadgets. Learn the basics in <a href="https://bloggerbasics101.blogspot.com/2018/10/how-to-add-custom-widget-for-blogger.html" target="_blank">How to Add Custom Widget for Blogger Blog</a>.</p>
 
-<h2>1. The "HTML/JavaScript" Gadget</h2>
-<p>The easiest way to add custom code is using the built-in HTML/JavaScript gadget:</p>
-<ol>
-    <li>Go to <strong>Layout</strong>.</li>
-    <li>Click <strong>Add a Gadget</strong> in your sidebar or footer.</li>
-    <li>Select <strong>HTML/JavaScript</strong>.</li>
-    <li>Paste your custom code (HTML, CSS, or JS) into the box and save.</li>
-</ol>
+<h2>1. HTML/JavaScript Gadget</h2>
+<p>This is the easiest way to add <a href="#link-to-post-22">custom CSS</a> or third-party scripts (like Newsletter forms). Always place these in the <a href="#link-to-post-18">correct layout position</a> to avoid slowing down your blog.</p>
 
-<h2>2. Hard-Coding into the Template</h2>
-<p>For more control, you can write the widget directly into your theme's XML. This is better for widgets that need to interact with Blogger data.</p>
-<pre><code>&lt;b:widget id='CustomAboutMe' title='About the Author' type='HTML'&gt;
-  &lt;b:includable id='main'&gt;
-    &lt;div class='widget-content'&gt;
-      &lt;img src='author-photo.jpg' /&gt;
-      &lt;p&gt;Hi! I am the author of this blog...&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/b:includable&gt;
-&lt;/b:widget&gt;</code></pre>
+<h2>2. XML Widgets</h2>
+<p>For deep integration, you can write <a href="#link-to-post-05">b:widget tags</a> directly into your theme. This allows your widget to access <a href="#link-to-post-01">Blogger Data</a> and use <a href="#link-to-post-03">Operators</a> for dynamic content.</p>
 
-<h2>3. Using External Widgets</h2>
-<p>Many services (like Elfsight, Powr, or even Twitter) provide "embed codes." These are usually just small snippets of JavaScript. Always remember to place these at the <strong>end</strong> of your widget or even just before the <code>&lt;/body&gt;</code> tag of your template to prevent them from slowing down your page load.</p>
+<h2>3. Advanced Use Cases</h2>
+<ul>
+    <li>Adding <a href="https://bloggerbasics101.blogspot.com/2018/10/what-is-twitter-card-meta-and-how-we.html" target="_blank">Twitter Card Meta</a>.</li>
+    <li>Creating <a href="#link-to-post-11">Breadcrumbs</a>.</li>
+    <li>Implementing <a href="#link-to-post-17">Structured Data</a>.</li>
+</ul>
 
-<p>Custom widgets allow you to extend Blogger's functionality far beyond its default settings.</p>
+<p>Custom widgets allow you to extend Blogger's functionality far beyond its default settings, turning your blog into a full-featured website.</p>

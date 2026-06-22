@@ -1,43 +1,30 @@
 <h1>Blogger Tags: Comprehensive List</h1>
 
-<p>Blogger tags are special XML tags used to build the structure and logic of a theme. They are easily identified by the <code>b:</code> prefix. Here is a breakdown of the most important tags you will use.</p>
+<p>Blogger tags are special XML tags used to build the structure and logic of a theme. They are easily identified by the <code>b:</code> prefix. For a full reference of every tag, visit <a href="https://bloggerbasics101.blogspot.com/2018/11/blogger-tag-intro.html" target="_blank">Blogger Tag Intro</a>.</p>
 
 <h2>Structural Tags</h2>
 <ul>
-    <li><code>&lt;b:section&gt;</code>: Defines a high-level area of your blog (like Header, Sidebar, Blog Posts). It can only contain <code>b:widget</code> tags.</li>
-    <li><code>&lt;b:widget&gt;</code>: Represents a specific gadget (like a Search box or Label list).</li>
+    <li><code>&lt;b:section&gt;</code>: Defines a high-level area of your blog. See our <a href="#link-to-post-05">Deep Dive into Sections</a>.</li>
+    <li><code>&lt;b:widget&gt;</code>: Represents a specific gadget. Learn how to <a href="#link-to-post-24">add widgets manually</a>.</li>
 </ul>
 
 <h2>Logic & Control Flow</h2>
 <ul>
-    <li><code>&lt;b:if&gt;</code>, <code>&lt;b:elseif/&gt;</code>, <code>&lt;b:else/&gt;</code>: Conditional tags used to show or hide content based on specific statements.</li>
-    <li><code>&lt;b:switch&gt;</code>, <code>&lt;b:case/&gt;</code>, <code>&lt;b:default/&gt;</code>: A more efficient way to handle multiple conditions.</li>
-    <li><code>&lt;b:loop&gt;</code>: Used to iterate over a list of items (like a list of posts or labels).</li>
+    <li><code>&lt;b:if&gt;</code>: Basic conditional. See <a href="#link-to-post-06">Blogger Conditional Tags</a>.</li>
+    <li><code>&lt;b:loop&gt;</code>: Iterates over data. See <a href="#link-to-post-07">Mastering the b:loop Tag</a>.</li>
+    <li><code>&lt;b:switch&gt;</code>: Efficient multiple conditions. See <a href="#link-to-post-28">Advanced Theme Tags</a>.</li>
 </ul>
 
 <h2>Modular Code (Inclusions)</h2>
 <ul>
-    <li><code>&lt;b:includable&gt;</code>: A reusable block of code. Every widget must have one with <code>id='main'</code>.</li>
-    <li><code>&lt;b:include/&gt;</code>: Calls and executes a <code>b:includable</code> block.</li>
-</ul>
-
-<h2>Variables & Data</h2>
-<ul>
-    <li><code>&lt;data:.../&gt;</code>: Displays a specific piece of data (e.g., <code>&lt;data:blog.title/&gt;</code>).</li>
-    <li><code>&lt;b:with&gt;</code>: Creates a temporary variable or alias for an expression.</li>
-    <li><code>&lt;b:eval/&gt;</code>: Evaluates and displays the result of a Blogger expression.</li>
+    <li><code>&lt;b:includable&gt;</code>: A reusable block of code.</li>
+    <li><code>&lt;b:include/&gt;</code>: Calls and executes an includable block. This is a key part of <a href="#link-to-post-29">modern modular theme design</a>.</li>
 </ul>
 
 <h2>Dynamic Elements</h2>
 <ul>
-    <li><code>&lt;b:tag&gt;</code>: Dynamically generates an HTML tag.</li>
-    <li><code>&lt;b:attr/&gt;</code>: Adds an attribute to its parent tag.</li>
-    <li><code>&lt;b:class/&gt;</code>: Adds a CSS class to its parent tag.</li>
+    <li><code>&lt;data:.../&gt;</code>: Displays <a href="#link-to-post-01">Blogger Data</a>.</li>
+    <li><code>&lt;b:eval/&gt;</code>: Evaluates <a href="#link-to-post-03">Blogger Expressions</a>.</li>
 </ul>
 
-<h2>Other Essential Tags</h2>
-<ul>
-    <li><code>&lt;b:skin&gt;</code>: Where the main CSS for the theme is stored.</li>
-    <li><code>&lt;b:template-script&gt;</code>: Used for including JavaScript in specific ways.</li>
-    <li><code>&lt;![CDATA[ ... ]]&gt;</code>: Used to prevent the Blogger compiler from encoding characters like <code>&lt;</code> or <code>&amp;</code> in your scripts and styles.</li>
-</ul>
+<p>These tags form the vocabulary of your theme. By combining them with <a href="#link-to-post-02">Attributes</a> and <a href="#link-to-post-03">Operators</a>, you can create professional-grade layouts.</p>

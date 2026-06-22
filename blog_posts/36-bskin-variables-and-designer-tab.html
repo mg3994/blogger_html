@@ -1,0 +1,19 @@
+<h1>Mastering b:skin Variables and Group Tags</h1>
+
+<p>Blogger's 'Theme Designer' (Customize tab) is a powerful way for users to change colors and fonts without touching code. As a designer, you can enable this by using <code>Variable</code> and <code>Group</code> tags inside your <a href="#link-to-post-22">Blogger Skin</a>.</p>
+
+<h2>1. Defining Variables</h2>
+<p>Variables allow you to create "placeholders" for <a href="#link-to-post-22">CSS</a> values. For example, to let users change the main theme color:</p>
+<pre><code>&lt;Variable name="main.color" description="Theme Color" type="color" default="#007bff" value="#007bff"/&gt;</code></pre>
+
+<h2>2. Using Group Tags</h2>
+<p>Groups organize these variables into sections (like 'Background' or 'Links') in the Theme Designer UI.</p>
+<pre><code>&lt;Group description="Colors"&gt;
+  &lt;Variable name="link.color" ... /&gt;
+&lt;/Group&gt;</code></pre>
+
+<h2>3. Applying in CSS</h2>
+<p>Once defined, you use the variable in your <a href="#link-to-post-22">CSS styling</a> using the <code>$(variable.name)</code> syntax:</p>
+<pre><code>a { color: $(link.color); }</code></pre>
+
+<p>This approach makes your theme extremely user-friendly and professional. If you are building complex themes with many variables, using a <a href="#link-to-post-29">modular framework like blogger_theme</a> can help you manage these definitions much more efficiently.</p>
