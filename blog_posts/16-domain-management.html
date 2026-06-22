@@ -1,0 +1,24 @@
+<h1>Domain Management: Custom Domains and Subdomains</h1>
+
+<p>Moving from a <code>.blogspot.com</code> address to a custom domain (like <code>www.yourname.com</code>) is one of the best ways to make your blog look professional.</p>
+
+<h2>1. Setting up a Custom Domain</h2>
+<ol>
+    <li>Buy a domain from a registrar (Google Domains, Namecheap, GoDaddy).</li>
+    <li>In Blogger, go to <strong>Settings > Publishing > Custom domain</strong>.</li>
+    <li>Enter your domain (include the <code>www</code>).</li>
+    <li>Blogger will provide two <strong>CNAME</strong> records. You must add these to your domain registrar's DNS settings.</li>
+    <li>Add four <strong>A-records</strong> pointing to Google's IPs (216.239.32.21, 216.239.34.21, 216.239.36.21, 216.239.38.21).</li>
+    <li>Wait for DNS propagation (can take up to 24 hours).</li>
+</ol>
+
+<h2>2. Setting up Subdomains</h2>
+<p>If you already have a custom domain for your main website, you can use a subdomain for your blog (e.g., <code>blog.yourwebsite.com</code>).</p>
+<ul>
+    <li>The process is the same as above, but instead of <code>www</code>, you use your chosen subdomain (e.g., <code>blog</code>) in the CNAME record.</li>
+</ul>
+
+<h2>3. Redirecting Naked Domains</h2>
+<p>Ensure that visitors who type <code>yourname.com</code> (without the www) still reach your blog. In Blogger settings, check the <strong>Redirect domain</strong> option after your custom domain is verified.</p>
+
+<p>A custom domain is an investment in your brand's identity and longevity on the web.</p>

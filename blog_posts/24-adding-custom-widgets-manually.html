@@ -1,0 +1,28 @@
+<h1>Adding Custom Widgets Manually</h1>
+
+<p>While Blogger provides many built-in gadgets (Labels, Archive, Profile), sometimes you need something unique—like a custom social media feed, a weather widget, or a specialized navigation menu.</p>
+
+<h2>1. The "HTML/JavaScript" Gadget</h2>
+<p>The easiest way to add custom code is using the built-in HTML/JavaScript gadget:</p>
+<ol>
+    <li>Go to <strong>Layout</strong>.</li>
+    <li>Click <strong>Add a Gadget</strong> in your sidebar or footer.</li>
+    <li>Select <strong>HTML/JavaScript</strong>.</li>
+    <li>Paste your custom code (HTML, CSS, or JS) into the box and save.</li>
+</ol>
+
+<h2>2. Hard-Coding into the Template</h2>
+<p>For more control, you can write the widget directly into your theme's XML. This is better for widgets that need to interact with Blogger data.</p>
+<pre><code>&lt;b:widget id='CustomAboutMe' title='About the Author' type='HTML'&gt;
+  &lt;b:includable id='main'&gt;
+    &lt;div class='widget-content'&gt;
+      &lt;img src='author-photo.jpg' /&gt;
+      &lt;p&gt;Hi! I am the author of this blog...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/b:includable&gt;
+&lt;/b:widget&gt;</code></pre>
+
+<h2>3. Using External Widgets</h2>
+<p>Many services (like Elfsight, Powr, or even Twitter) provide "embed codes." These are usually just small snippets of JavaScript. Always remember to place these at the <strong>end</strong> of your widget or even just before the <code>&lt;/body&gt;</code> tag of your template to prevent them from slowing down your page load.</p>
+
+<p>Custom widgets allow you to extend Blogger's functionality far beyond its default settings.</p>

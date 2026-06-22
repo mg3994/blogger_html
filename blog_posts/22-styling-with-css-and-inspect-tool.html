@@ -1,0 +1,29 @@
+<h1>How to Style your Blogger Theme with CSS and Inspect Tool</h1>
+
+<p>You don't need to be a professional coder to change the color of your header or the font of your posts. All you need is a basic understanding of CSS and your browser's "Inspect" tool.</p>
+
+<h2>1. Using the Inspect Tool</h2>
+<p>Right-click on any element on your blog (e.g., your post title) and select <strong>Inspect</strong> (or press F12). This opens the developer tools.</p>
+<ul>
+    <li><strong>Elements tab:</strong> Shows the HTML structure.</li>
+    <li><strong>Styles tab:</strong> Shows the CSS currently being applied.</li>
+</ul>
+<p>You can live-edit colors and sizes in the Styles tab to see how they look before making any permanent changes.</p>
+
+<h2>2. Finding the Right Selector</h2>
+<p>Look for the <code>class</code> or <code>id</code> of the element you want to change. For example, if your post titles have <code>class="post-title"</code>, your CSS will look like this:</p>
+<pre><code>.post-title {
+  color: #ff5733;
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+}</code></pre>
+
+<h2>3. Where to Add your CSS</h2>
+<p>In Blogger, you have three options:</p>
+<ol>
+    <li><strong>Advanced Designer:</strong> Go to <strong>Theme > Customize > Advanced > Add CSS</strong>. This is the safest way for beginners.</li>
+    <li><strong>The b:skin tag:</strong> Edit the HTML and find <code>&lt;b:skin&gt;</code>. Paste your code inside the <code>CDATA</code> block.</li>
+    <li><strong>Style tags:</strong> You can also add <code>&lt;style&gt; ... &lt;/style&gt;</code> tags directly into your post HTML for post-specific styling.</li>
+</ol>
+
+<p><strong>Pro Tip:</strong> Always use <code>!important</code> sparingly. If your CSS isn't applying, it might be because Blogger's default styles are overriding yours.</p>

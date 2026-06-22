@@ -1,0 +1,26 @@
+<h1>Customizing UX: 404 Pages, Mobile m=1, and GDPR</h1>
+
+<p>A great blog isn't just about content; it's about the user experience. Here is how to handle some common technical hurdles.</p>
+
+<h2>1. Creating a Custom 404 Page</h2>
+<p>When a visitor lands on a broken link, don't let them see a generic error message. Create a custom 404 page that helps them find what they were looking for.</p>
+<ol>
+    <li>Go to <strong>Settings > Errors and redirects > Custom 404</strong>.</li>
+    <li>Enter your custom HTML message. You can include links to your best posts or a search box.</li>
+</ol>
+
+<h2>2. Dealing with the ?m=1 Parameter</h2>
+<p>Blogger adds <code>?m=1</code> to URLs when a visitor is on a mobile device. While this helps Blogger serve mobile-optimized versions of old themes, many modern responsive themes don't need it.</p>
+<p>To "disable" it (via redirect), you can add a small JavaScript snippet to your theme's <code>&lt;head&gt;</code> that removes the parameter from the URL, keeping your links clean for sharing.</p>
+
+<h2>3. GDPR and Cookie Notifications</h2>
+<p>If you have visitors from the EU, you are required by law to show a cookie consent banner. Blogger provides a default banner automatically for blogs on <code>.blogspot</code> domains.</p>
+<p>If you use a <strong>Custom Domain</strong>, you may need to implement your own notification. You can customize the look of the default Blogger banner using CSS targeting the <code>#cookieChoiceInfo</code> ID.</p>
+
+<pre><code>#cookieChoiceInfo {
+  background-color: #333 !important;
+  color: #fff !important;
+  font-family: 'Arial', sans-serif;
+}</code></pre>
+
+<p>Small tweaks to these areas can make your blog feel much more modern and user-friendly.</p>

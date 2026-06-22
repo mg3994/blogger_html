@@ -1,0 +1,34 @@
+<h1>Mastering the b:loop Tag</h1>
+
+<p>The <code>&lt;b:loop&gt;</code> tag is used to iterate through a collection of data, such as a list of blog posts, labels, or comments. It is the workhorse of dynamic content display in Blogger.</p>
+
+<h2>Basic Syntax</h2>
+<pre><code>&lt;b:loop values='DATA_COLLECTION' var='VARIABLE_NAME'&gt;
+  &lt;!-- Content to repeat for each item --&gt;
+&lt;/b:loop&gt;</code></pre>
+
+<h2>Example: Listing Labels</h2>
+<pre><code>&lt;ul&gt;
+  &lt;b:loop values='data:posts.first.labels' var='label'&gt;
+    &lt;li&gt;&lt;a expr:href='data:label.url'&gt;&lt;data:label.name/&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/b:loop&gt;
+&lt;/ul&gt;</code></pre>
+
+<h2>Advanced Attributes</h2>
+<ul>
+    <li><code>index</code>: A variable name to track the current position in the loop (starting at 0).</li>
+    <li><code>reverse</code>: If set to "true", the loop iterates in reverse order.</li>
+</ul>
+
+<pre><code>&lt;b:loop values='data:posts' var='post' index='i'&gt;
+  &lt;p&gt;Post Number &lt;data:i/&gt;: &lt;data:post.title/&gt;&lt;/p&gt;
+&lt;/b:loop&gt;</code></pre>
+
+<h2>Filtering Loops</h2>
+<p>You can combine loops with lambda operators for powerful results:</p>
+<pre><code>&lt;!-- Only show the first 3 posts --&gt;
+&lt;b:loop values='data:posts limit 3' var='post'&gt;
+  &lt;h2&gt;&lt;data:post.title/&gt;&lt;/h2&gt;
+&lt;/b:loop&gt;</code></pre>
+
+<p>Loops allow you to create beautiful, data-driven grids and lists that update automatically as you publish new content.</p>

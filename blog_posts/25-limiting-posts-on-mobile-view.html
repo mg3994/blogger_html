@@ -1,0 +1,27 @@
+<h1>Limiting Posts on Mobile View</h1>
+
+<p>If you have a very content-heavy blog, your mobile users might struggle with long loading times. You can set a different limit for how many posts appear on your homepage when viewed on a mobile device.</p>
+
+<h2>1. Why limit mobile posts?</h2>
+<ul>
+    <li><strong>Speed:</strong> Fewer posts mean fewer images and scripts to load.</li>
+    <li><strong>User Experience:</strong> Prevents "infinite scrolling" fatigue on small screens.</li>
+    <li><strong>Data Usage:</strong> Saves bandwidth for your mobile visitors.</li>
+</ul>
+
+<h2>2. The Code Trick</h2>
+<p>In your <code>Blog1</code> widget, Blogger uses a loop to display posts. You can use a conditional check on <code>data:view.isMobile</code> combined with the <code>limit</code> operator.</p>
+
+<pre><code>&lt;!-- In your Blog1 widget's main includable --&gt;
+&lt;b:with value='data:view.isMobile ? 3 : 7' var='postLimit'&gt;
+  &lt;b:loop values='data:posts limit data:postLimit' var='post'&gt;
+    &lt;!-- Display post content --&gt;
+  &lt;/b:loop&gt;
+&lt;/b:with&gt;</code></pre>
+
+<p>In this example, the blog will show <strong>3 posts</strong> on mobile and <strong>7 posts</strong> on desktop.</p>
+
+<h2>3. Blogger's "Mobile Theme" Settings</h2>
+<p>If you are using an older, non-responsive theme, you can also go to <strong>Theme > Mobile</strong> and choose how your blog looks. However, for modern themes, the "Responsive" setting is always recommended, and the code-based limit above gives you much more control.</p>
+
+<p>Performance optimization for mobile is no longer a luxury; it's a necessity for modern SEO.</p>

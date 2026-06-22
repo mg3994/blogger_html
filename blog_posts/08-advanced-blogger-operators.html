@@ -1,0 +1,34 @@
+<h1>Advanced Operators: Lambda, Resize, and Snippets</h1>
+
+<p>While basic math and logic are great, Blogger offers advanced operators that give you granular control over your content and images.</p>
+
+<h2>1. Lambda Operators (=&gt;)</h2>
+<p>Lambda expressions allow you to perform complex operations on arrays of data without writing multiple loops.</p>
+<ul>
+    <li><code>filter</code>: Returns only items that match a condition.</li>
+    <li><code>any</code>: True if at least one item matches.</li>
+    <li><code>all</code>: True if every item matches.</li>
+    <li><code>count</code>: Returns the number of items matching a condition.</li>
+</ul>
+<pre><code>&lt;!-- Count how many labels are named "News" --&gt;
+&lt;b:eval expr='data:post.labels count (l =&gt; l.name == "News")'/&gt;</code></pre>
+
+<h2>2. resizeImage Operator</h2>
+<p>This is a lifesaver for performance. It allows you to request a specific size for an image hosted on Google/Blogger.</p>
+<pre><code>&lt;!-- Resize post thumbnail to 200px width --&gt;
+&lt;img expr:src='resizeImage(data:post.featuredImage, 200)'/&gt;
+
+&lt;!-- Resize to 400px with a specific aspect ratio (square) --&gt;
+&lt;img expr:src='resizeImage(data:post.featuredImage, 400, "1:1")'/&gt;</code></pre>
+
+<h2>3. snippet Operator</h2>
+<p>Used to create a summary of a long text block. Great for post excerpts.</p>
+<pre><code>&lt;!-- Show first 150 characters of post body, removing HTML tags --&gt;
+&lt;p&gt;&lt;b:eval expr='snippet(data:post.body, {length: 150, links: false, linebreaks: false})'/&gt;...&lt;/p&gt;</code></pre>
+
+<h2>4. Ternary Operator (? :)</h2>
+<p>A compact way to write an if/else statement in a single line.</p>
+<pre><code>&lt;!-- Use "Post" if it's a post view, otherwise use "Blog" --&gt;
+&lt;b:eval expr='data:view.isPost ? "Post View" : "Blog View"'/&gt;</code></pre>
+
+<p>Mastering these advanced operators will significantly reduce the amount of code in your template while making it much more powerful.</p>

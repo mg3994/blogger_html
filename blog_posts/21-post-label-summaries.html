@@ -1,0 +1,43 @@
+<h1>Creating Post Label Summary Like Google Search Results</h1>
+
+<p>By default, Blogger's label pages show full posts or large snippets. You can customize your theme to show a clean, list-based summary that mimics the look of Google Search result snippets.</p>
+
+<h2>1. The Goal</h2>
+<p>Instead of showing long posts, we want to show:</p>
+<ul>
+    <li>The Post Title (linked).</li>
+    <li>A short, clean text snippet (no images or HTML).</li>
+    <li>The date or labels.</li>
+</ul>
+
+<h2>2. The Logic</h2>
+<p>You need to locate the <code>Blog1</code> widget in your XML and find where the post content is being called. Use a conditional tag to show the summary view only on search and label pages.</p>
+
+<pre><code>&lt;b:if cond='data:view.isSearch or data:view.isLabelSearch'&gt;
+  &lt;div class='search-result-item'&gt;
+    &lt;h3&gt;&lt;a expr:href='data:post.url'&gt;&lt;data:post.title/&gt;&lt;/a&gt;&lt;/h3&gt;
+    &lt;p&gt;&lt;b:eval expr='snippet(data:post.body, {length: 160})'/&gt;&lt;/p&gt;
+    &lt;span class='result-url'&gt;&lt;data:post.url/&gt;&lt;/span&gt;
+  &lt;/div&gt;
+&lt;b:else/&gt;
+  &lt;!-- Show normal post view --&gt;
+  &lt;data:post.body/&gt;
+&lt;/b:if&gt;</code></pre>
+
+<h2>3. Styling for that "Search Engine" Look</h2>
+<pre><code>.search-result-item h3 {
+  color: #1a0dab;
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+.search-result-item p {
+  color: #4d5156;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.result-url {
+  color: #006621;
+  font-size: 12px;
+}</code></pre>
+
+<p>This simple change makes your blog much easier to navigate when users are searching for specific topics.</p>

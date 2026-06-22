@@ -1,0 +1,65 @@
+<h1>Blogger Attribute Introduction</h1>
+
+<p>Every Blogger tag (starting with <code>b:</code>) can have one or more attributes. These attributes provide additional information or modify the default behavior of the tag. Understanding how to use these attributes is crucial for creating dynamic and functional templates.</p>
+
+<h2>Blogger Expressions in Attributes</h2>
+<p>Attributes in Blogger tags are designed to work with the Blogger Language. Their values can be:</p>
+<ul>
+    <li><strong>String:</strong> Wrapped in quotes (e.g., <code>"example"</code>).</li>
+    <li><strong>Boolean:</strong> Written without quotes (e.g., <code>true</code>).</li>
+    <li><strong>Number:</strong> Written without quotes (e.g., <code>123</code>).</li>
+    <li><strong>Object:</strong> Written with braces (e.g., <code>{ item1: "value" }</code>).</li>
+    <li><strong>Array:</strong> Written with square brackets (e.g., <code>["a", "b"]</code>).</li>
+    <li><strong>Blogger Data:</strong> Direct reference to data (e.g., <code>data:blog.title</code>).</li>
+    <li><strong>Blogger Expression Operation:</strong> Using operators to calculate a value.</li>
+</ul>
+
+<p><strong>Pro Tip:</strong> You can convert a standard HTML attribute into a Blogger Expression attribute by adding the <code>expr:</code> prefix (e.g., <code>expr:href="data:blog.url"</code>).</p>
+
+<h2>Common Blogger Attributes</h2>
+<table border="1" cellpadding="5">
+    <thead>
+        <tr>
+            <th>Attribute</th>
+            <th>Applies To</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>cond</code></td>
+            <td>b:if, b:section, b:widget, etc.</td>
+            <td>A condition that must be true for the tag to execute.</td>
+        </tr>
+        <tr>
+            <td><code>data</code></td>
+            <td>b:includable, b:include</td>
+            <td>Passes data as an alias to the included content.</td>
+        </tr>
+        <tr>
+            <td><code>id</code></td>
+            <td>b:section, b:widget, b:includable</td>
+            <td>A unique identifier for the element.</td>
+        </tr>
+        <tr>
+            <td><code>var</code></td>
+            <td>b:loop, b:with</td>
+            <td>The name of the variable container for the data.</td>
+        </tr>
+        <tr>
+            <td><code>values</code></td>
+            <td>b:loop</td>
+            <td>The collection of data to iterate over.</td>
+        </tr>
+        <tr>
+            <td><code>maxwidgets</code></td>
+            <td>b:section</td>
+            <td>Limits the number of gadgets allowed in a section.</td>
+        </tr>
+        <tr>
+            <td><code>showaddelement</code></td>
+            <td>b:section</td>
+            <td>Boolean: allows or disallows adding new gadgets in the Layout tab.</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,38 @@
+<h1>Deep Dive: b:section and b:widget Tags</h1>
+
+<p>The <code>&lt;b:section&gt;</code> and <code>&lt;b:widget&gt;</code> tags are the foundation of any Blogger theme. They define the structural layout and the functional components (gadgets).</p>
+
+<h2>1. The &lt;b:section&gt; Tag</h2>
+<p>Sections are high-level containers that organize your layout. They can only contain <code>&lt;b:widget&gt;</code> tags.</p>
+
+<h3>Key Attributes:</h3>
+<ul>
+    <li><code>id</code> (Required): A unique name for the section (e.g., "header", "sidebar").</li>
+    <li><code>class</code>: CSS class for styling.</li>
+    <li><code>maxwidgets</code>: Limits how many gadgets can be added to this section.</li>
+    <li><code>showaddelement</code>: If "yes", shows the "Add a Gadget" link in the Layout tab.</li>
+</ul>
+
+<pre><code>&lt;b:section id='main-sidebar' class='sidebar' maxwidgets='5' showaddelement='yes'&gt;
+  &lt;!-- Widgets go here --&gt;
+&lt;/b:section&gt;</code></pre>
+
+<h2>2. The &lt;b:widget&gt; Tag</h2>
+<p>Widgets are the actual gadgets that display content. They must reside inside a <code>&lt;b:section&gt;</code>.</p>
+
+<h3>Key Attributes:</h3>
+<ul>
+    <li><code>id</code> (Required): A unique ID (e.g., "Header1", "Blog1").</li>
+    <li><code>type</code> (Required): The type of widget (e.g., "Header", "Blog", "Label", "HTML").</li>
+    <li><code>title</code>: The display title of the widget.</li>
+    <li><code>locked</code>: If "yes", the widget cannot be moved or deleted in the Layout tab.</li>
+    <li><code>visible</code>: If "no", the widget is hidden.</li>
+</ul>
+
+<pre><code>&lt;b:widget id='Header1' locked='true' title='Blog Header' type='Header' version='2'&gt;
+  &lt;b:includable id='main'&gt;
+    &lt;h1&gt;&lt;data:title/&gt;&lt;/h1&gt;
+  &lt;/b:includable&gt;
+&lt;/b:widget&gt;</code></pre>
+
+<p>Understanding these two tags is the first step in moving from a basic blog user to a theme developer.</p>

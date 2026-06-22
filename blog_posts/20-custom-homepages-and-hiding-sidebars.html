@@ -1,0 +1,32 @@
+<h1>Custom Homepages and Hiding Sidebars</h1>
+
+<p>Sometimes you want a specific page or a unique layout to be the first thing people see when they visit your blog, rather than a list of recent posts.</p>
+
+<h2>1. Creating a "Real" Homepage</h2>
+<p>By default, Blogger's homepage is a feed of your latest posts. To create a static landing page:</p>
+<ol>
+    <li>Create a static <strong>Page</strong> (not a post) with your landing page content.</li>
+    <li>Go to <strong>Settings > Errors and redirects > Custom redirects</strong>.</li>
+    <li>Redirect from <code>/</code> (your home) to the URL of your new page.</li>
+</ol>
+<p><strong>Note:</strong> This is a simple way, but a more advanced way is using conditional tags (<code>b:if</code>) in your theme to show unique content only when <code>data:view.isHomepage</code> is true.</p>
+
+<h2>2. Hiding Sidebars on Specific Pages</h2>
+<p>Many designers prefer a "Full Width" look for static pages or specific posts. You can achieve this using Blogger's conditional tags to conditionally hide the sidebar section.</p>
+
+<h3>The Code Trick:</h3>
+<p>In your XML, find the sidebar section and wrap it:</p>
+<pre><code>&lt;b:if cond='!data:view.isPage'&gt;
+  &lt;b:section id='sidebar'&gt;
+    &lt;!-- Sidebar widgets --&gt;
+  &lt;/b:section&gt;
+&lt;/b:if&gt;</code></pre>
+<p>The <code>!</code> means "NOT". So this code says: "Show the sidebar ONLY if the current view is NOT a static page."</p>
+
+<h2>3. Adjusting Content Width</h2>
+<p>Don't forget to adjust your main content's width when the sidebar is hidden. You can use a conditional class for this:</p>
+<pre><code>&lt;div expr:class='data:view.isPage ? "main-content full-width" : "main-content"'&gt;
+  &lt;!-- Post content --&gt;
+&lt;/div&gt;</code></pre>
+
+<p>These advanced layout tricks allow you to break free from the standard Blogger "Blog" look and create a truly unique website.</p>

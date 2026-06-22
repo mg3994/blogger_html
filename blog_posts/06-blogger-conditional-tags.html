@@ -1,0 +1,55 @@
+<h1>Blogger Conditional Tags: b:if, b:else, and b:elseif</h1>
+
+<p>Conditional tags allow you to show or hide content based on specific conditions, such as which page the visitor is currently viewing.</p>
+
+<h2>Basic Syntax</h2>
+<pre><code>&lt;b:if cond='CONDITION'&gt;
+  &lt;!-- Content to show if condition is true --&gt;
+&lt;/b:if&gt;</code></pre>
+
+<h2>Using b:else and b:elseif</h2>
+<pre><code>&lt;b:if cond='data:view.isPost'&gt;
+  &lt;p&gt;This is a post page.&lt;/p&gt;
+&lt;b:elseif cond='data:view.isPage'/&gt;
+  &lt;p&gt;This is a static page.&lt;/p&gt;
+&lt;b:else/&gt;
+  &lt;p&gt;This is something else (Home, Label, or Archive).&lt;/p&gt;
+&lt;/b:if&gt;</code></pre>
+
+<h2>Commonly Used Conditions</h2>
+<table border="1" cellpadding="5">
+    <thead>
+        <tr>
+            <th>Condition</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>data:view.isHomepage</code></td>
+            <td>True if the visitor is on the main homepage.</td>
+        </tr>
+        <tr>
+            <td><code>data:view.isPost</code></td>
+            <td>True if the visitor is viewing a specific blog post.</td>
+        </tr>
+        <tr>
+            <td><code>data:view.isPage</code></td>
+            <td>True if the visitor is viewing a static page.</td>
+        </tr>
+        <tr>
+            <td><code>data:view.isLabelSearch</code></td>
+            <td>True if the visitor is viewing a label result page.</td>
+        </tr>
+        <tr>
+            <td><code>data:view.isMobile</code></td>
+            <td>True if the visitor is using a mobile device.</td>
+        </tr>
+        <tr>
+            <td><code>data:blog.url == data:blog.homepageUrl</code></td>
+            <td>Another way to check for the homepage.</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>These tags are essential for customizing layouts, such as hiding sidebars on post pages or showing unique banners on the homepage.</p>

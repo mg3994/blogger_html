@@ -1,0 +1,28 @@
+<h1>Robots.txt and Advanced SEO for Blogger</h1>
+
+<p>To have full control over how search engines crawl your blog, you need to understand the <code>robots.txt</code> file and how to use robots meta tags.</p>
+
+<h2>1. What is Robots.txt?</h2>
+<p>The <code>robots.txt</code> file tells search engine crawlers which pages or files the crawler can or can't request from your site. This is used mainly to avoid overloading your site with requests.</p>
+
+<h3>Blogger's Default Robots.txt</h3>
+<p>By default, Blogger creates a perfect <code>robots.txt</code> for you. It allows crawling of posts and pages but blocks search result pages (to avoid duplicate content issues).</p>
+
+<h2>2. Customizing Robots.txt</h2>
+<p>You can edit this in <strong>Settings > Crawlers and indexing > Custom robots.txt</strong>. <strong>Warning:</strong> Improper settings can hide your entire blog from Google!</p>
+
+<h2>3. Custom Robots Header Tags</h2>
+<p>This is a safer and more precise way to control indexing. In <strong>Settings</strong>, you can set defaults for:</p>
+<ul>
+    <li><strong>Home page:</strong> Usually set to <code>all</code>.</li>
+    <li><strong>Archive and Search Pages:</strong> Usually set to <code>noindex</code> to avoid duplicate content.</li>
+    <li><strong>Posts and Pages:</strong> Set to <code>all</code>.</li>
+</ul>
+
+<h2>4. Blocking Specific Pages (noindex)</h2>
+<p>If you have a specific post you don't want to show in search results, you can add this inside your template within a conditional tag:</p>
+<pre><code>&lt;b:if cond='data:blog.url == "URL_OF_PAGE_TO_HIDE"'&gt;
+  &lt;meta name="robots" content="noindex" /&gt;
+&lt;/b:if&gt;</code></pre>
+
+<p>Advanced SEO is about making it as easy as possible for Google to find your high-quality content while hiding the technical or duplicate "noise" of your blog.</p>
